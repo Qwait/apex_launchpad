@@ -1,8 +1,8 @@
 from pyramid_apex.interfaces import IPyramidApex
 
 from pyramid_launchpad.exceptions import MessageException
-from pyramid_apex.interfaces import IPyramidLaunchpad
-from pyramid_apex.interfaces import PyramidLaunchpadImplementation
+from pyramid_launchpad.interfaces import IPyramidLaunchpad
+from pyramid_launchpad.interfaces import PyramidLaunchpadImplementation
 from pyramid_launchpad.views import landing
 from pyramid_launchpad.views import thanks
 
