@@ -1,0 +1,2 @@
+graft pyramid_launchpad/static/
+graft pyramid_launchpad/templates/

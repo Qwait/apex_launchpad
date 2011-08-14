@@ -1,0 +1,12 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: smaller;
+}
+.wrap {
+    width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #ccc;
+}
