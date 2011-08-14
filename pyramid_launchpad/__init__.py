@@ -1,12 +1,16 @@
 from pyramid_apex.interfaces import IPyramidApex
 
 from pyramid_launchpad.exceptions import MessageException
+from pyramid_apex.interfaces import IPyramidLaunchpad
+from pyramid_apex.interfaces import PyramidLaunchpadImplementation
 from pyramid_launchpad.views import landing
 from pyramid_launchpad.views import thanks
 
 def includeme(config):
     settings = config.registry.settings
-    
+
+    config.registry.registerUtility(PyramidLaunchpadImplementation, IPyramidLaunchpad)
+
     if not config.registry.queryUtility(IPyramidApex):
         raise MessageException('Pyramid Apex isn\'t setup')
     
