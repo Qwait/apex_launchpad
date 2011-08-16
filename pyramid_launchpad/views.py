@@ -14,7 +14,6 @@ def landing(request):
         action = 'social'
     else:
         if request.method == 'POST' and form.validate():
-            request.session['id'] = 1
             flash(_('Thanks'))
             return HTTPFound(location='/thanks')
 
