@@ -21,3 +21,12 @@ launchpad.fb.admins = Facebook Admin userid
     
 launchpad.facebook_appid = Facebook AppID to avoid having to add app to send stream posts
 launchpad.twitter_description = 140 character or less description of the site for the tweet
+
+launchpad.twitter_post = 130 character or less invitation message (shortcode for referral code appended to referral text.
+
+launchpad.fb.picture = url to picture, can be same as OpenGraph picture, 
+                       used on Facebook wall post
+launchpad.fb.name = Name of site for Facebook wall post
+launchpad.fb.caption = Caption for Facebook wall post
+launchpad.fb.message = Message for Facebook wall post
+launchpad.fb.description = Description for Facebook wall post
