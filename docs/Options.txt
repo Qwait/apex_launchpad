@@ -10,7 +10,7 @@ launchpad.blurb = text about the site
     
 launchpad.favicon = http://path.to/favicon.ico
     
-launchpad.googleanalytics = UAxxxxxx-xxx
+launchpad.google_analytics = UAxxxxxx-xxx
 
 launchpad.og.title = OpenGraph Title of the site
 launchpad.og.type = OpenGraph Type of site (usually website)

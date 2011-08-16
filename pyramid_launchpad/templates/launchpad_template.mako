@@ -37,11 +37,14 @@ var _gaq=_gaq||[];_gaq.push(["_setAccount","${launch_settings('google_analytics'
 </script>
 % endif
 
+<%namespace file="pyramid_apex:templates/flash_template.mako" import="*"/>
+${apex_head()}
 </head>
 <body>
 <!-- background_image -->
 
 <div class="wrap">
+${apex_flash()}
  <div style="width: 350; height: 150px; background: #000;">
 % if launch_settings('form_image'):
 <img src="${launch_settings('form_image')}" width="350" height="150" />
@@ -50,10 +53,6 @@ var _gaq=_gaq||[];_gaq.push(["_setAccount","${launch_settings('google_analytics'
  ${launch_settings('blurb')}
 % if action == 'index':
  ${form.render()|n}
-% else:
-Thank you
-% endif
-
 <div style="float:left;">
 <g:plusone href="${launch_settings('og.url')}"></g:plusone>
 </div>
@@ -65,6 +64,38 @@ Thank you
 <fb:like href="${launch_settings('og.url')}" width="150" show_faces="false" font="" layout="button_count" action="recommend"></fb:like>
 </div>
 <div style="clear:both;"></div>
+% else:
+<p>
+Want to boost yourself to the front of the line?
+</p>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js">
+</script>
+<script>
+  FB.init({ 
+    appId:'115946211819546', cookie:true, 
+    status:true, xfbml:true 
+  });
+  function feedpost() {
+
+  FB.ui({ method: 'feed', 
+    picture: 'http://daviesinc.com/daviesinc.gif',
+    name: 'Go 2 RE',
+    caption: 'Go to Real Estate Listings',
+    message: 'I found this site and it generates QR codes for me to use on my real estate marketing materials.',
+    link: 'http://pch1.mia.colo-cation.com:8080/r/1',
+    description: 'A simple, easy way to generate and manage QR codes for your realty business',
+    redirect_url: 'http://pch1.mia.colo-cation.com:8080/manager/referral',
+  });
+}
+</script>
+<a href="javascript:feedpost();">Post to your Facebook wall</a>
+
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+<a href="http://twitter.com/share?count=none&text=Go2RE generates QR codes for me to use on my real estate marketing materials.&url=http://pch1.mia.colo-cation.com:8080/r/1" class="twitter-share-button">Tweet</a>
+
+
+% endif
 </div>
 
 </div>

@@ -10,10 +10,13 @@ from pyramid_launchpad.lib.launch import launch_settings
 def landing(request):
     form = LandingForm(request.POST)
     action = 'index'
-
-    if request.method == 'POST' and form.validate():
-        flash(_('Thanks'))
-        return HTTPFound(location='/thanks')
+    if request.session.get('id'):
+        action = 'social'
+    else:
+        if request.method == 'POST' and form.validate():
+            request.session['id'] = 1
+            flash(_('Thanks'))
+            return HTTPFound(location='/thanks')
 
     return {'form': form, 'action': action}
 
