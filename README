@@ -1,0 +1,4 @@
+Pyramid_launchpad is a simple application using Pyramid and Pyramid_Apex
+to allow one to make a very simple landing page for their startup. Since 
+it uses Pyramid_Apex, email addresses are added to an auth_user table so
+later they can be imported and reclaimed into an existing auth table.

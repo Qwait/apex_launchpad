@@ -28,29 +28,3 @@ def includeme(config):
 
     config.add_route('pyramid_launchpad_thanks', '/thanks')
     config.add_view(thanks, route_name='pyramid_launchpad_thanks', renderer=render_template)    
-    
-    
-    '''
-    title
-    meta_description
-    meta_keywords
-    
-    form_image
-    background_image
-    
-    alert_message
-    blurb
-    
-    favicon
-    
-    google analytics
-    
-    og:title
-    og:type
-    og:url
-    og:image
-    og:site_name
-    fb:admins
-    
-    facebook app id
-    '''
