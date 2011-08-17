@@ -24,3 +24,7 @@ def includeme(config):
 
     config.add_route('pyramid_launchpad_thanks', '/thanks')
     config.add_view(thanks, route_name='pyramid_launchpad_thanks', renderer=render_template)    
+
+    config.add_route('pyramid_launchpad_refer', '/r/:refer_id')
+    config.add_view(landing, route_name='pyramid_launchpad_refer', renderer=render_template)
+

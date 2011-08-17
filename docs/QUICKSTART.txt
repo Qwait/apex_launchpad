@@ -85,3 +85,7 @@ In example/__init__.py, before the return config.make_wsgi_app(), put:
 remove the route for '/'
 
 The URLs created are / and /thanks
+
+In your project, models.py:
+
+from pyramid_launchpad.models import ForeignKeyProfile
