@@ -2,7 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
+% if launch_settings('title'):
 <title>${launch_settings('title')}</title>
+% endif
 <link rel="stylesheet" href="${request.static_url('pyramid_apex:static/css/apex_forms.css')}" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="${request.static_url('pyramid_launchpad:static/css/base.css')}" type="text/css" media="screen" charset="utf-8" />
 % if launch_settings('meta_description'):
@@ -50,7 +52,11 @@ ${apex_flash()}
 <img src="${launch_settings('form_image')}" width="350" height="150" />
 % endif
  </div>
+% if launch_settings('blurb'):
  ${launch_settings('blurb')}
+% else:
+  You've not set the some of the settings.
+% endif
 % if action == 'index':
  ${form.render()|n}
 <div style="float:left;">
@@ -68,10 +74,10 @@ ${apex_flash()}
 <p>
 Want to boost yourself to the front of the line?
 </p>
+% if launch_settings('facebook_appid'):
 <div id="fb-root"></div>
 <script src="http://connect.facebook.net/en_US/all.js">
 </script>
-% if launch_settings('facebook_appid'):
 <script>
   FB.init({ 
     appId:'${launch_settings('facebook_appid')}', cookie:true, 
@@ -95,8 +101,8 @@ Want to boost yourself to the front of the line?
 % if launch_settings('fb.description'):
     description: '${launch_settings('fb.description')}',
 % endif
-% if launch_settings('og.url'):
-    link: '${launch_settings('og.url')}/r/1',
+% if launch_settings('og.url') and request.session.get('id'):
+    link: '${launch_settings('og.url')}r/${request.session['id']}',
     redirect_url: '${launch_settings('og.url')}',
 % endif
   });
@@ -105,9 +111,9 @@ Want to boost yourself to the front of the line?
 <a href="javascript:feedpost();">Post to your Facebook wall</a>
 % endif
 
-% if launch_settings('twitter_post'):
+% if launch_settings('twitter_post') and request.session.get('id'):
 <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-<a href="http://twitter.com/share?count=none&text=${launch_settings('twitter_post')}&url=${launch_settings('og.url')}/r/1" class="twitter-share-button">Tweet</a>
+<a href="http://twitter.com/share?count=none&text=${launch_settings('twitter_post')}&url=${launch_settings('og.url')}r/${request.session['id']}" class="twitter-share-button">Tweet</a>
 % endif
 % endif
 </div>
