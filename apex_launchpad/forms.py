@@ -3,8 +3,8 @@ from wtforms import validators
 
 from pyramid.i18n import TranslationString as _
 
-from pyramid_apex.models import AuthUser
-from pyramid_apex.lib.form import ExtendedForm
+from apex.models import AuthUser
+from apex.lib.form import ExtendedForm
 
 class LandingForm(ExtendedForm):
     email = TextField('Email', [validators.Email(), validators.Required()])

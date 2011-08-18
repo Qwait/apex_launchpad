@@ -1,9 +1,9 @@
-Initial Setup of Pyramid-Launchpad
+Initial Setup of Apex Launchpad
 
 virtualenv --no-site-packages newenv
 cd newenv
 source bin/activate
-easy_install https://github.com/qwait/pyramid_launchpad/tarball/master
+easy_install https://github.com/qwait/apex_launchpad/tarball/master
 paster create -t pyramid_routesalchemy example
 cd example
 vi development.ini
@@ -79,8 +79,8 @@ OpenID Store:
 
 In example/__init__.py, before the return config.make_wsgi_app(), put:
 
-    config.include('pyramid_apex')
-    config.include('pyramid_launchpad')
+    config.include('apex')
+    config.include('apex_launchpad')
 
 remove the route for '/'
 
@@ -88,4 +88,4 @@ The URLs created are / and /thanks
 
 In your project, models.py:
 
-from pyramid_launchpad.models import ForeignKeyProfile
+from apex_launchpad.models import ForeignKeyProfile

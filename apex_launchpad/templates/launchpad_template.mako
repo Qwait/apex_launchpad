@@ -5,8 +5,8 @@
 % if launch_settings('title'):
 <title>${launch_settings('title')}</title>
 % endif
-<link rel="stylesheet" href="${request.static_url('pyramid_apex:static/css/apex_forms.css')}" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="${request.static_url('pyramid_launchpad:static/css/base.css')}" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="${request.static_url('apex:static/css/apex_forms.css')}" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="${request.static_url('apex_launchpad:static/css/base.css')}" type="text/css" media="screen" charset="utf-8" />
 % if launch_settings('meta_description'):
 <meta name="description" content="${launch_settings('meta_description')}" />
 % endif
@@ -39,7 +39,7 @@ var _gaq=_gaq||[];_gaq.push(["_setAccount","${launch_settings('google_analytics'
 </script>
 % endif
 
-<%namespace file="pyramid_apex:templates/flash_template.mako" import="*"/>
+<%namespace file="apex:templates/flash_template.mako" import="*"/>
 ${apex_head()}
 </head>
 <body>

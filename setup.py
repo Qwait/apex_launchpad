@@ -4,5 +4,5 @@ version = '0.9.0'
 
 setup(
     version=version,
-    name='Pyramid Launchpad',
+    name='Apex Launchpad',
 )

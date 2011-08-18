@@ -2,14 +2,14 @@ from pyramid.httpexceptions import HTTPFound
 from pyramid.i18n import TranslationString as _
 from pyramid.view import view_config
 
-from pyramid_apex.lib.flash import flash
-from pyramid_apex.lib.apex import apex_settings
-from pyramid_apex.lib.apex import create_user
-from pyramid_apex.models import AuthUser
-from pyramid_apex.models import DBSession
+from apex.lib.flash import flash
+from apex.lib.libapex import apex_settings
+from apex.lib.libapex import create_user
+from apex.models import AuthUser
+from apex.models import DBSession
 
-from pyramid_launchpad.models import ForeignKeyProfile
-from pyramid_launchpad.forms import LandingForm
+from apex_launchpad.models import ForeignKeyProfile
+from apex_launchpad.forms import LandingForm
 
 def referrer_update(user, refer_id):
     try:

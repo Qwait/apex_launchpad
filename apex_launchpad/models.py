@@ -13,8 +13,8 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import synonym
 from sqlalchemy.sql import functions
 
-from pyramid_apex.models import Base
-from pyramid_apex.models import AuthUser
+from apex.models import Base
+from apex.models import AuthUser
 
 class ForeignKeyProfile(Base):
     __tablename__ = 'auth_user_profile'
