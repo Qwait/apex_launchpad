@@ -12,6 +12,12 @@ from apex_launchpad.models import ForeignKeyProfile
 from apex_launchpad.forms import LandingForm
 
 def referrer_update(user, refer_id):
+    """ user = user object
+    refer_id = referring user ID
+
+    No return value
+    """
+
     try:
         fkp = DBSession.query(ForeignKeyProfile). \
                   filter(ForeignKeyProfile.user_id==refer_id).one()

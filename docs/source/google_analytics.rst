@@ -1,4 +1,5 @@
-Set up Google Analytics.
+Set up Google Analytics
+=======================
 
 https://www.google.com/analytics/
 
@@ -13,9 +14,11 @@ Add a Web Property Name and the URL, adjust the Time Zone if needed.
 Create Property.
 
 Click on it, go to the 'Tracking Code' tab, get the 'Web Property ID' and
-put that in development.ini under:
+put that in **development.ini** under:
 
-launchpad.google_analytics = 
+::
+
+    launchpad.google_analytics = 
 
 Pull down the 'My Conversions' menu, go to 'Goals'
 Set up goals and funnels
