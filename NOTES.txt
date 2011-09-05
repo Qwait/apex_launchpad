@@ -1,0 +1,10 @@
+* Single line header announcing what site does
+* explain site in a little more detail, why should someone sign up?
+* signup with email, or, facebook/twitter/google 
+* after signup, allow publish to facebook/twitter with referral code
+* allow user to see # of referrals, position in list
+* # of referrals affects position
+* reserve name/url
+* countdown to open/next phase
+* time expired invite
+* facebook 'like' face page
